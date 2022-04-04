@@ -104,7 +104,7 @@ async def stop_cmd(_, message):
 @app.on_message(filters.command(["pause", f"pause@{BOT_USERNAME}", "ps"]))
 async def pause_cmd(_, message): 
     if message.sender_chat:
-        return await message.reply_text("Kamu adalah __Admin Anonim__!\nKembalikan ke Akun Pengguna.") 
+        return await message.reply_text("Kan Lu __Admin Anonim__!\nKembalikan ke Akun Lu Dulu Tod.") 
     permission = "can_manage_voice_chats"
     m = await adminsOnly(permission, message)
     if m == 1:
@@ -136,7 +136,7 @@ async def stop_cmd(_, message):
     else:
         await music_on(chat_id)
         await music.pytgcalls.resume_stream(chat_id)
-        await message.reply_text(f"**🎧 Sip Music Dilanjut Si Kontol {checking}!**")
+        await message.reply_text(f"**🎧 Sip Music Dilanjut Admin Anjing {checking}!**")
 
 @app.on_message(filters.command(["end", f"end@{BOT_USERNAME}", "e"]))
 async def stop_cmd(_, message): 
@@ -155,7 +155,7 @@ async def stop_cmd(_, message):
             pass                        
         await remove_active_chat(chat_id)
         await music.pytgcalls.leave_group_call(chat_id)
-        await message.reply_text(f"**🎧 Music Di Stop Si KONTOL {checking}!**") 
+        await message.reply_text(f"**🎧 Music Di Stop Admin Anjing {checking}!**") 
     else:
         return await message.reply_text("Ga Ada Lagu Yang Lu Play Di Vcg Anak Setan")
     
@@ -176,7 +176,7 @@ async def stop_cmd(_, message):
         task_done(chat_id)
         if is_empty(chat_id):
             await remove_active_chat(chat_id)
-            await message.reply_text("Ga ada musi lagi ngetd __Queue__ \n\nMeninggalkan Obrolan Suara")
+            await message.reply_text("Ga ada musi lagi ngetd \n\nAsisten Balik ")
             await music.pytgcalls.leave_group_call(chat_id)
             return  
         else:
@@ -259,7 +259,7 @@ async def stop_cmd(_, message):
                     reply_markup=InlineKeyboardMarkup(buttons),
                     caption=(
                         f"""
-<b>⏭️ Melewati lagu</b>
+<b>⏭️ Lagu Di Skip Admin Anjing</b>
 
 <b>🏷 Nama:</b>[{title[:25]}]({url})
 <b>⏱️ Durasi:</b> {duration}
@@ -296,7 +296,7 @@ async def stop_cmd(_, message):
                 photo=f"downloads/{_chat_}final.png",
                     reply_markup=InlineKeyboardMarkup(buttons),
                     caption=f"""
-<b>⏭️ Lagu Nya Di Skip</b>
+<b>⏭️ Lagu Di Skip Admin Anjing</b>
 
 <b>🏷️ Nama:</b> {title}
 <b>⏱️ Durasi:</b> {duration}
