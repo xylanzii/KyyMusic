@@ -42,7 +42,7 @@ async def _human_time_duration(seconds):
     return ', '.join(parts)
 
 
-KYY_IMG = "https://telegra.ph/file/2b610c918dec590d2777b.jpg"
+KYY_IMG = "https://telegra.ph/Vylan-Robot-04-04"
 
 
 @app.on_message(filters.command(["alive", "alive@Tg_Vc_00_Bot"]))
