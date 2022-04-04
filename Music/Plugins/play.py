@@ -164,18 +164,18 @@ async def music_onoff(_, message: Message):
             return
         DISABLED_GROUPS.remove(message.chat.id)
         await lel.edit(
-            f"**✅ Music Telah Di Diaktifkan Di {message.chat.title}**"
+            f"**✅ Music Udah Aktif Ya Setan {message.chat.title}**"
         )
 
     elif status in ("OFF", "off", "Off"):
         lel = await message.reply("`processing...`")
 
         if message.chat.id in DISABLED_GROUPS:
-            await lel.edit("» **Music Di Nonaktifkan.**")
+            await lel.edit("» **Music Dimatiin Admin Kontol.**")
             return
         DISABLED_GROUPS.append(message.chat.id)
         await lel.edit(
-            f"**✅ Music Telah Di Nonaktifkan Di {message.chat.title}**"
+            f"**✅ Music Udah Aktif Ya setan {message.chat.title}**"
         )
     else:
         await message.reply_text(
@@ -189,14 +189,14 @@ async def play(_, message: Message):
     if message.sender_chat:
         return await message.reply_text(
             """
-Anda adalah Admin Anonim!
-Kembalikan kembali ke Akun Pengguna Dari Hak Admin.
+Lu adalah Admin Anonim Kntl!
+Kembalikan Ke Akun Biasa Lu Ya Setan Ya.
 """
         )
     global useer
     if chat_id in DISABLED_GROUPS:
         return await message.reply_text(
-            f"😕 **Maap {message.from_user.mention}, Musicnya Dimatiin Sama Admin**" 
+            f"😕 **Bacot bat {message.from_user.mention}, Musicnya Dimatiin Admin Kntl**" 
         )
         return
     user_id = message.from_user.id
@@ -299,7 +299,7 @@ Saya perlu menjadi admin dengan beberapa izin:
         what = "Audio Searched"
         await LOG_CHAT(message, what)
         mystic = await message.reply_text(
-            f"**🔄 Sabar ya anjing ini lagi dicari    { username } **"
+            f"**🔄 Sabar ya anjing ini lagi dicari { username } **"
         )
         if audio.file_size > 157286400:
             await mystic.edit_text("Ukuran File Audio Harus Kurang dari 150 mb")
@@ -308,7 +308,7 @@ Saya perlu menjadi admin dengan beberapa izin:
         if duration > DURATION_LIMIT:
             return await mystic.edit_text(
                 f"""
-**Kesalahan Durasi**
+**Kelamaan durasi nya tod**
 
 **Durasi yang Diizinkan: **{DURATION_LIMIT}
 **Durasi yang Diterima:** {duration}
@@ -357,7 +357,7 @@ Saya perlu menjadi admin dengan beberapa izin:
         if smex > DURATION_LIMIT:
             return await mystic.edit_text(
                 f"""
-**Kesalahan Durasi**
+**Kelamaan Durasinya tod**
 
 **Durasi yang Diizinkan:** {DURATION_LIMIT}
 **Durasi yang Diterima:** {duration}
@@ -457,7 +457,7 @@ Saya perlu menjadi admin dengan beberapa izin:
         what = "Query Given"
         await LOG_CHAT(message, what)
         query = message.text.split(None, 1)[1]
-        mystic = await message.reply_text("**🔎 Pencarian**")
+        mystic = await message.reply_text("**🔎 Nyari lagu **")
         try:
             a = VideosSearch(query, limit=5)
             result = (a.result()).get("result")
@@ -478,14 +478,14 @@ Saya perlu menjadi admin dengan beberapa izin:
             ID5 = result[4]["id"]
         except Exception as e:
             return await mystic.edit_text(
-                f"Lagu Tidak Ditemukan.\n**Kemungkinan Alasan:** {e}"
+                f"Ga Ada Lagu Itu Anjing.\n**Kemungkinan Alasan:** {e}"
             )
         thumb ="cache/IMG_20211230_211518_897.jpg"
         await mystic.delete()
         buttons = search_markup(ID1, ID2, ID3, ID4, ID5, duration1, duration2, duration3, duration4, duration5, user_id, query)
         hmo = await message.reply_photo(
             photo=thumb,
-            caption=f"**✨ Di pilih tod mau lagu apa **\n\n¹ <b>{title1}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n² <b>{title2}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n³ <b>{title3}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n⁴ <b>{title4}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n⁵ <b>{title5}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__",    
+            caption=f"**✨ Di Pilih Anjing Mau Lagu Apa **\n\n¹ <b>{title1}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n² <b>{title2}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n³ <b>{title3}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n⁴ <b>{title4}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n⁵ <b>{title5}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__",    
             reply_markup=InlineKeyboardMarkup(buttons),
         )
         disable_web_page_preview=True
@@ -599,7 +599,7 @@ async def startyuplay(_, CallbackQuery):
     if smex > DURATION_LIMIT:
         await CallbackQuery.message.reply_text(
             f"""
-**Kesalahan Durasi**
+**Kelamaan Durasinya anjing**
 
 **Durasi yang Diizinkan: {DURATION_LIMIT}**
 **Durasi yang Diteriman:** {duration}
@@ -712,12 +712,12 @@ async def startyuplay(_, CallbackQuery):
         m = await CallbackQuery.message.reply_photo(
             photo=thumb,
             caption=f"""
-<b>💡 Trek ditambahkan ke antrian</b>
+<b>💡 Ngantri Cok Lagunya Sabar</b>
 
 <b>🏷 Nama:</b>[{title[:25]}]({url})
 <b>⏱️ Durasi:</b> {duration}
 <b>💡</b> [More Information](https://t.me/{BOT_USERNAME}?start=info_{id})
-<b>🎧 Atas permintaan:</b> {checking}
+<b>🎧 Req nya Si Kontol:</b> {checking}
 
 <b>#️⃣ Posisi antrian</b> {position}
 """,
@@ -746,7 +746,7 @@ async def startyuplay(_, CallbackQuery):
 <b>🏷 Nama:</b> [{title[:25]}]({url})
 <b>⏱️ Durasi:</b> {duration}
 <b>💡</b> [More Information](https://t.me/{BOT_USERNAME}?start=info_{id})
-<b>🎧 Atas permintaan:</b> {checking}
+<b>🎧 Req nya Si Kontol:</b> {checking}
 """,
         )
         os.remove(thumb)
