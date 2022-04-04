@@ -112,17 +112,17 @@ async def pause_cmd(_, message):
     checking = message.from_user.mention
     chat_id = message.chat.id
     if not await is_active_chat(chat_id):
-        return await message.reply_text("Saya tidak berpikir jika ada sesuatu yang diputar di obrolan suara")
+        return await message.reply_text("Ga Ada Lagu Yang Lu Play Di Vcg Anak setan")
     elif not await is_music_playing(message.chat.id):
-        return await message.reply_text("Saya tidak berpikir jika ada sesuatu yang diputar di obrolan suara")   
+        return await message.reply_text("Ga Ada Lagu Yang Lu Play Di Vcg Anak Setan")   
     await music_off(chat_id)
     await music.pytgcalls.pause_stream(chat_id)
-    await message.reply_text(f"🎧 Yang pause musik anak kontol {checking}!")
+    await message.reply_text(f"🎧 Music Nya di Pause Si KONTOL {checking}!")
     
 @app.on_message(filters.command(["resume", f"resume@{BOT_USERNAME}", "rs"]))
 async def stop_cmd(_, message): 
     if message.sender_chat:
-        return await message.reply_text("Kamu adalah __Admin Anonim__!\nKembalikan ke Akun Pengguna.") 
+        return await message.reply_text("Kan Lu __Admin Anonim__!\nKembalikan ke Akun Lu Anjing.") 
     permission = "can_manage_voice_chats"
     m = await adminsOnly(permission, message)
     if m == 1:
@@ -130,18 +130,18 @@ async def stop_cmd(_, message):
     checking = message.from_user.mention
     chat_id = message.chat.id
     if not await is_active_chat(chat_id):
-        return await message.reply_text("Saya tidak berpikir jika ada sesuatu yang diputar di obrolan suara")
+        return await message.reply_text("Ga Ada Lagu Yang Lu Play Di Vcg Anak Setan")
     elif await is_music_playing(chat_id):
-        return await message.reply_text("Saya tidak berpikir jika ada sesuatu yang diputar di obrolan suara") 
+        return await message.reply_text("Ga Ada Lagu Yang Lu Play Di Vcg Anak Setan") 
     else:
         await music_on(chat_id)
         await music.pytgcalls.resume_stream(chat_id)
-        await message.reply_text(f"**🎧 Sip lanjut nyanyi pantek {checking}!**")
+        await message.reply_text(f"**🎧 Sip Music Dilanjut Si Kontol {checking}!**")
 
 @app.on_message(filters.command(["end", f"end@{BOT_USERNAME}", "e"]))
 async def stop_cmd(_, message): 
     if message.sender_chat:
-        return await message.reply_text("Kamu adalah __Admin Anonim__!\nKembalikan ke Akun Pengguna.") 
+        return await message.reply_text("Kan Lu __Admin Anonim__!\nKembalikan ke Akun Lu Anjing.") 
     permission = "can_manage_voice_chats"
     m = await adminsOnly(permission, message)
     if m == 1:
@@ -155,14 +155,14 @@ async def stop_cmd(_, message):
             pass                        
         await remove_active_chat(chat_id)
         await music.pytgcalls.leave_group_call(chat_id)
-        await message.reply_text(f"**🎧 Admin Anjing gua nyanyi di stop {checking}!**") 
+        await message.reply_text(f"**🎧 Music Di Stop Si KONTOL {checking}!**") 
     else:
-        return await message.reply_text("Saya tidak berpikir jika ada sesuatu yang diputar di obrolan suara")
+        return await message.reply_text("Ga Ada Lagu Yang Lu Play Di Vcg Anak Setan")
     
 @app.on_message(filters.command(["skip", f"skip@{BOT_USERNAME}", "sk"]))
 async def stop_cmd(_, message): 
     if message.sender_chat:
-        return await message.reply_text("Kamu adalah __Admin Anonim__!\nKembalikan ke Akun Pengguna.") 
+        return await message.reply_text("Kan Lu __Admin Anonim__!\nKembalikan ke Akun Lu Anjing.") 
     permission = "can_manage_voice_chats"
     m = await adminsOnly(permission, message)
     if m == 1:
@@ -263,7 +263,7 @@ async def stop_cmd(_, message):
 
 <b>🏷 Nama:</b>[{title[:25]}]({url})
 <b>⏱️ Durasi:</b> {duration}
-<b>🎧 Atas permintaan:</b> {semx.mention}
+<b>🎧 Req Nya Si KONTOL:</b> {semx.mention}
 """
                     ),
                 )
@@ -296,11 +296,11 @@ async def stop_cmd(_, message):
                 photo=f"downloads/{_chat_}final.png",
                     reply_markup=InlineKeyboardMarkup(buttons),
                     caption=f"""
-<b>⏭️ Melewati lagu</b>
+<b>⏭️ Lagu Nya Di Skip</b>
 
 <b>🏷️ Nama:</b> {title}
 <b>⏱️ Durasi:</b> {duration}
-<b>🎧 Atas permintaan</b> {username}
+<b>🎧 Req nya Si KONTOL:</b> {username}
 """,
                 )
                 return
