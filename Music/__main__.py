@@ -19,7 +19,7 @@ Client(
     API_HASH,
     bot_token=BOT_TOKEN,
     plugins={'root': 'Music.Plugins'},
-
+).start()
 
 print(f"[INFO]: BOT STARTED AS {BOT_NAME}!")
 print(f"[INFO]: ASSISTANT STARTED AS {ASSNAME}!")
