@@ -29,10 +29,11 @@ from Music.MusicUtilities.helpers.thumbnails import down_thumb
 from Music.MusicUtilities.helpers.ytdl import ytdl_opts
 from Music.MusicUtilities.tgcallsrun.music import pytgcalls
 from pyrogram import Client, filters
-from pyrogram.types import
+from pyrogram.types import (
     InlineKeyboardButton,
     InlineKeyboardMarkup,
     Message
+)
 
 welcome_captcha_group = 2
 
