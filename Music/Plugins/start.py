@@ -45,7 +45,7 @@ async def welcome(_, message: Message):
         try:
             if member.id in OWNER:
                 return await message.reply_text(
-                    f"💡 Pemilik Bot [{member.mention}] baru saja bergabung di grup ini."
+                    f"💡 PAK OWNER!! [{member.mention}] baru saja bergabung di grup ini SUNGKEM!!."
                 )
             if member.id in SUDOERS:
                 return await message.reply_text(
